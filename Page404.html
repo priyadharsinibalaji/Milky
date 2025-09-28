@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page404</title>
+      <link rel="icon" sizes="85x85" href="Images/cow_circle_only.png" >
+
+      <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ✅ AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+</head>
+<style>
+    #header{
+        height: 45px;
+        width: 100%;
+        background-color: #3C4430;
+        margin-top: -7px;
+        margin-left: -7px;
+    }
+#smallheader {
+    height: 45px;
+    width: 263px;
+    background-color: rgb(230, 206, 71);
+    margin-left: 1070px;
+}
+#header p {
+    font-size: 20px;
+    margin-top: -35px;
+    margin-left: 45px;
+    color: white;
+    font-weight: bold;
+}
+#headicons {
+    margin-top: -45px;
+    font-size: 20px;
+    color: white;
+    margin-left: 150px;
+    display: flex;
+    gap: 20px;
+}
+
+#teleicon {
+    margin-left: 1100px;
+    font-size: 20px;
+    margin-top: -22px;
+    color: #3C4430;
+}
+#teleicon p {
+    font-size: 18px;
+    margin-top: -23px;
+    color: #3C4430;
+    margin-left: 25px;
+}
+#heading h1 {
+    font-size: 44px;
+    margin-left: 38px;
+    color: #3C4430;
+    margin-top: 20px;
+}
+/* Navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-left: 650px;
+    margin-top: -62px;
+    position: relative; /* added */
+    z-index: 1000;   
+}   
+/* Links */
+#navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#navbar a:hover {
+    color: #75c004;
+    cursor: pointer;
+}
+/* Links container */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.dropdown {
+    position: relative;
+    
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    top: 40px;
+    left: 0;
+    min-width: 150px;
+    border-radius: 5px;
+    z-index: 1;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.dropdown-content a {
+    padding: 5px;
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+.dropdown-content a:hover {
+    background: #c0d89f;
+    color: white;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative; /* added */
+    z-index: 9999;      /* added */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #header {
+        display: none;
+    }
+    #heading h1 {
+        margin-left: 20px;
+        font-size: 36px;
+    }
+    #navbar {
+        justify-content: space-between;
+        margin: 0;
+        margin-top: -70px;
+        margin-left: 190px; /* adjusted */
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #d6d6d6;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1px 0;
+        border-radius: 0 0 10px 10px;
+        z-index: 9999; /* added */
+    }
+    .nav-links.show {
+        display: flex;
+    }
+        .nav-links a {
+      padding: 5px;
+    }
+    .nav-links a:hover {
+      background-color: #506930;
+      color: white;
+    }
+    .nav-links.show {
+      display: flex;
+    }
+    .hamburger {
+        display: block;
+        margin-left: 120px;
+        margin-top: 7px;
+    }
+}
+    /* Banner Section */
+    #banner1 {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    #banner1 img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover; /* keeps image neat */
+      display: block;
+      margin-top: 20px;
+    }
+
+    #banner1 h1 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 82px;
+      color: white;
+      margin: 0;
+      text-align: center;
+    }
+
+    /* Breadcrumb links */
+    #anchor {
+      position: absolute;
+      bottom: 110px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20px;
+    }
+
+    #anchor a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ✅ Responsive */
+    @media (max-width: 768px) {
+      #banner1 img {
+        height: 200px;
+      }
+
+      #banner1 h1 {
+        font-size: 42px;
+        top: 35%;
+      }
+
+      #anchor {
+        font-size: 16px;
+        bottom: 80px;
+
+      }
+    }
+
+
+    /* Footer */
+    .footer {
+      background: #394735; 
+      color: #fff;
+      padding: 50px 20px 20px;
+      margin-top: 80px;
+    }
+
+    .footer .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer h4 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer p, 
+    .footer a, 
+    .footer li {
+      color: #ddd;
+      font-size: 16px;
+      line-height: 1.8;
+      text-decoration: none;
+    }
+
+    .footer ul li {
+      margin-bottom: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .footer ul li:hover {
+      transform: translateX(8px);
+      color: #ffffff;
+    }
+
+    .footer ul li a {
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+
+    .footer ul li a:hover {
+      color: #ffffff; 
+      font-weight: bold;
+    }
+
+    .footer ul li i {
+      margin-right: 8px;
+      color: #d8d7d7;   
+      transition: color 0.3s ease;
+    }
+
+    .footer .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      background: #d6bb4f;
+      color: #394735;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      border-radius: 50%;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .footer .social-icons a:hover {
+      background: #fff;
+      color: #394735;
+    }
+
+    .footer-bottom {
+      background: #d8bc4c;
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
+      color: #595e57;
+      height: 50px;
+      margin-top: 0px;
+    }
+
+    #time {
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+    }
+
+    #style {
+      color: rgb(35, 85, 35);
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    #newsbtn input {
+      padding: 10px;
+      color: #ffffff;
+      height: 40px;
+      width: 250px; 
+      font-size: 18px; 
+      border: 1px solid #ffffff; 
+      border-radius: 10px;
+      background-color: transparent;
+      outline: none;
+      transition: 0.1s ease;
+    }
+
+    #newsbtn input:focus {
+      box-shadow: 0 0 10px 2px rgba(94, 145, 70, 0.9);
+      border-color: #ffffff;
+    }
+
+    #newsbtn button {
+      background-color: #daba3c; 
+      border-radius: 10px; 
+      height: 45px; 
+      width: 90px;
+      border: none;
+      font-size: 18px;
+      margin-left: -100px;
+    }
+
+    @media (max-width: 768px) {
+      .footer {
+        padding: 30px 15px;
+        text-align: center;
+      }
+
+      .footer .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer h4 {
+        font-size: 20px;
+      }
+
+      .footer p, 
+      .footer a, 
+      .footer li {
+        font-size: 15px;
+      }
+
+      .footer .social-icons {
+        margin-top: 15px;
+      }
+
+      .footer .social-icons a {
+        margin: 5px;
+      }
+
+      #newsbtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #newsbtn input {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+      }
+
+      #newsbtn button {
+        margin-left: 0;
+        width: 120px;
+      }
+
+      .footer-bottom {
+        font-size: 14px;
+        line-height: 1.6;
+        height: 60px;
+      }
+
+      #style {
+        color: rgb(35, 85, 35);
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+    #pages i{
+        font-size: 85px;
+        margin-left: 625px;
+        position: absolute;
+        margin-top: -80px;
+        color: #4e741c;
+    }
+    #pages h1{
+        margin-top: 180px;
+        text-align: center;
+        font-size: 120px;
+          color: #303030;
+
+    }
+    #pages h3{
+        text-align: center;
+        margin-top: -80px;
+        font-size: 50px;
+          color: #303030;
+
+    }
+    #pages p{
+        text-align: center;
+        margin-top: -30px;
+        font-size: 20px;
+          color: #494444;
+
+    }
+    #pages button{
+        height: 60px;
+        width: 180px;
+        background-color: #daba3c;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        margin-left: 580px;
+        color: #223b02;
+    }
+    /* Responsive design */
+@media (max-width: 768px) {
+  #pages button {
+    width: 70%;       /* Full width on tablets/mobiles */
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 50px;
+  }
+  #pages i{
+    margin-left: 160px;
+  }
+}
+
+    
+            
+
+
+            
+</style>
+<body>
+      <!-- Header -->
+ <section id="Home">
+  <div id="header">
+    <div id="smallheader"></div>
+    <p>Follow Us:</p>
+    <div id="headicons">
+      <i class="bi bi-facebook"></i>  
+      <i class="bi bi-twitter"></i>
+      <i class="bi bi-linkedin"></i>
+      <i class="bi bi-instagram"></i>
+    </div>
+    <div id="teleicon">
+      <i class="bi bi-telephone-fill"></i>
+      <p>Call Us: +012 345 6789</p>
+    </div>
+  </div><!-- header close -->
+
+  <!-- Heading -->
+  <div id="heading">
+    <h1>Milky</h1>
+  </div>
+
+  <!-- Navbar -->
+  <div id="navbar">
+    <!-- Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="Index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Service.html">Services</a>
+      <a href="Product.html">Products</a>
+      
+      <div class="dropdown">
+        <a href="#">Pages <i class="bi bi-caret-down-fill"></i></a>
+        <div class="dropdown-content">
+          <a href="Gallery.html">Gallery</a>
+          <a href="Features.html">Features</a>
+          <a href="Our Team.html">Our Team</a>
+          <a href="Testimonal.html">Testimonial</a>
+          <a href="Page404.html">Page 404</a>
+        </div>
+      </div>
+
+      <a href="Contact.html">Contact</a>
+    </div>
+
+    <!-- Hamburger inside navbar -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="bi bi-list"></i>
+    </div>
+  </div>
+
+  <div id="banner1">
+    <img src="Images/banner1234.jpg" alt="">
+    <h1>404 Page</h1>
+    <div id="anchor">
+      <a href="Index.html">Home &nbsp;/</a>
+      <a href="">Pages &nbsp;/</a>
+      <a href="Page404.html">404 Page</a>
+    </div>
+  </div>
+
+ <div id="pages">
+    <i class="bi bi-exclamation-triangle"></i>
+    <h1>404</h1>
+    <h3>Page Not Found</h3>
+    <p>We’re sorry, the page you have looked for does not exist in our website! <br> Maybe go to our home page or try to use a search?</p>
+    <a href="Index.html"><button>Go Back To Home</button></a>
+ </div>
+
+
+
+
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="container">
+      
+      <!-- Our Office -->
+      <div data-aos="fade-up">
+        <h4>Our Office</h4>
+        <p><i class="fa fa-map-marker-alt"></i> 123 Street, New York, USA</p>
+        <p><i class="fa fa-phone"></i> +012 345 67890</p>
+        <p><i class="fa fa-envelope"></i> info@example.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h4>Quick Links</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="#"><i class="fa fa-angle-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Our Services</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Terms & Condition</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Business Hours -->
+      <div data-aos="fade-up" data-aos-delay="400">
+        <h4>Business Hours</h4>
+        <p>Monday - Friday<br><b id="time">09:00 am - 07:00 pm</b></p>
+        <p>Saturday<br><b id="time">09:00 am - 12:00 pm</b></p>
+        <p>Sunday<br><b id="time">Closed</b></p>
+      </div>
+
+      <!-- Newsletter -->
+      <div data-aos="fade-up" data-aos-delay="600">
+        <h4>Newsletter</h4>
+        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+        <div id="newsbtn">
+          <input type="email" placeholder="Your Email">
+          <button>SignUp</button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <div class="footer-bottom" data-aos="fade-up" data-aos-delay="800">
+    <p>© <span id="style"> Your Site Name</span>, All Right Reserved.  
+    Designed By <span id="style">HTML Codex</span> Distributed By <span id="style">ThemeWagon</span></p>
+  </div>
+
+
+
+    <!-- Nav JS -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+    <!-- ✅ AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation time
+      once: true      // animate only once
+    });
+  </script>
+</body>
+</html>

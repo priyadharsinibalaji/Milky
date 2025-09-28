@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+      <link rel="icon" sizes="85x85" href="Images/cow_circle_only.png" >
+
+      <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ✅ AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+</head>
+<style>
+    #header{
+        height: 45px;
+        width: 100%;
+        background-color: #3C4430;
+        margin-top: -7px;
+        margin-left: -7px;
+    }
+#smallheader {
+    height: 45px;
+    width: 263px;
+    background-color: rgb(230, 206, 71);
+    margin-left: 1070px;
+}
+#header p {
+    font-size: 20px;
+    margin-top: -35px;
+    margin-left: 45px;
+    color: white;
+    font-weight: bold;
+}
+#headicons {
+    margin-top: -45px;
+    font-size: 20px;
+    color: white;
+    margin-left: 150px;
+    display: flex;
+    gap: 20px;
+}
+
+#teleicon {
+    margin-left: 1100px;
+    font-size: 20px;
+    margin-top: -22px;
+    color: #3C4430;
+}
+#teleicon p {
+    font-size: 18px;
+    margin-top: -23px;
+    color: #3C4430;
+    margin-left: 25px;
+}
+#heading h1 {
+    font-size: 44px;
+    margin-left: 38px;
+    color: #3C4430;
+    margin-top: 20px;
+}
+/* Navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-left: 650px;
+    margin-top: -62px;
+    position: relative; /* added */
+    z-index: 1000;   
+}   
+/* Links */
+#navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#navbar a:hover {
+    color: #75c004;
+    cursor: pointer;
+}
+/* Links container */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.dropdown {
+    position: relative;
+    
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    top: 40px;
+    left: 0;
+    min-width: 150px;
+    border-radius: 5px;
+    z-index: 1;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.dropdown-content a {
+    padding: 5px;
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+.dropdown-content a:hover {
+    background: #c0d89f;
+    color: white;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative; /* added */
+    z-index: 9999;      /* added */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #header {
+        display: none;
+    }
+    #heading h1 {
+        margin-left: 20px;
+        font-size: 36px;
+    }
+    #navbar {
+        justify-content: space-between;
+        margin: 0;
+        margin-top: -70px;
+        margin-left: 190px; /* adjusted */
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #d6d6d6;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1px 0;
+        border-radius: 0 0 10px 10px;
+        z-index: 9999; /* added */
+    }
+    .nav-links.show {
+        display: flex;
+    }
+        .nav-links a {
+      padding: 5px;
+    }
+    .nav-links a:hover {
+      background-color: #506930;
+      color: white;
+    }
+    .nav-links.show {
+      display: flex;
+    }
+    .hamburger {
+        display: block;
+        margin-left: 120px;
+        margin-top: 7px;
+    }
+}
+    /* Banner Section */
+    #banner11 {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    #banner11 img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover; /* keeps image neat */
+      display: block;
+      margin-top: 20px;
+    }
+
+    #banner11 h1 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 82px;
+      color: white;
+      margin: 0;
+    }
+
+    /* Breadcrumb links */
+    #anchor {
+      position: absolute;
+      bottom: 110px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20px;
+    }
+
+    #anchor a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ✅ Responsive */
+    @media (max-width: 768px) {
+      #banner11 img {
+        height: 200px;
+      }
+
+      #banner11 h1 {
+        font-size: 38px;
+        top: 35%;
+      }
+
+      #anchor {
+        font-size: 16px;
+        bottom: 80px;
+
+      }
+    }
+
+
+    /* Footer */
+    .footer {
+      background: #394735; 
+      color: #fff;
+      padding: 50px 20px 20px;
+      margin-top: 80px;
+    }
+
+    .footer .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer h4 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer p, 
+    .footer a, 
+    .footer li {
+      color: #ddd;
+      font-size: 16px;
+      line-height: 1.8;
+      text-decoration: none;
+    }
+
+    .footer ul li {
+      margin-bottom: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .footer ul li:hover {
+      transform: translateX(8px);
+      color: #ffffff;
+    }
+
+    .footer ul li a {
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+
+    .footer ul li a:hover {
+      color: #ffffff; 
+      font-weight: bold;
+    }
+
+    .footer ul li i {
+      margin-right: 8px;
+      color: #d8d7d7;   
+      transition: color 0.3s ease;
+    }
+
+    .footer .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      background: #d6bb4f;
+      color: #394735;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      border-radius: 50%;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .footer .social-icons a:hover {
+      background: #fff;
+      color: #394735;
+    }
+
+    .footer-bottom {
+      background: #d8bc4c;
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
+      color: #595e57;
+      height: 50px;
+      margin-top: 0px;
+    }
+
+    #time {
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+    }
+
+    #style {
+      color: rgb(35, 85, 35);
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    #newsbtn input {
+      padding: 10px;
+      color: #ffffff;
+      height: 40px;
+      width: 250px; 
+      font-size: 18px; 
+      border: 1px solid #ffffff; 
+      border-radius: 10px;
+      background-color: transparent;
+      outline: none;
+      transition: 0.1s ease;
+    }
+
+    #newsbtn input:focus {
+      box-shadow: 0 0 10px 2px rgba(94, 145, 70, 0.9);
+      border-color: #ffffff;
+    }
+
+    #newsbtn button {
+      background-color: #daba3c; 
+      border-radius: 10px; 
+      height: 45px; 
+      width: 90px;
+      border: none;
+      font-size: 18px;
+      margin-left: -100px;
+    }
+
+    @media (max-width: 768px) {
+      .footer {
+        padding: 30px 15px;
+        text-align: center;
+      }
+
+      .footer .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer h4 {
+        font-size: 20px;
+      }
+
+      .footer p, 
+      .footer a, 
+      .footer li {
+        font-size: 15px;
+      }
+
+      .footer .social-icons {
+        margin-top: 15px;
+      }
+
+      .footer .social-icons a {
+        margin: 5px;
+      }
+
+      #newsbtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #newsbtn input {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+      }
+
+      #newsbtn button {
+        margin-left: 0;
+        width: 120px;
+      }
+
+      .footer-bottom {
+        font-size: 14px;
+        line-height: 1.6;
+        height: 60px;
+      }
+
+      #style {
+        color: rgb(35, 85, 35);
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+    /* Our Team CSS */
+#fullpro1 {
+  text-align: center;
+  margin: 60px auto 20px;
+  position: relative;
+}
+
+#fullpro1 h1 {
+  font-size: 30px;
+  color: green;
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+}
+
+/* left side two lines */
+#fullpro1 h1::before,
+#fullpro1 h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background: green;
+}
+
+#fullpro1 h1::before {
+  width: 40px;   /* long line */
+  left: -30px;
+}
+
+#fullpro1 h1::after {
+  width: 60px;   /* short line */
+  left: -50px;
+  top: calc(50% + 6px); /* shift downward */
+}
+
+/* right side two lines */
+#fullpro1 h1 span::before,
+#fullpro1 h1 span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background: green;
+}
+
+#fullpro1 h1 span::before {
+  width: 40px;   /* long line */
+  right: -30px;
+}
+
+#fullpro1 h1 span::after {
+  width: 60px;   /* short line */
+  right: -50px;
+  top: calc(50% + 6px); /* shift downward */
+}
+
+#prohead1 h1 {
+  font-size: 45px;
+  color: #494444;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -25px;
+}
+
+
+    /* Team Card */
+    #teamimg {
+      height: 530px;
+      width: 360px;
+      background-color: #fff;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px,
+                  rgba(14, 30, 37, 0.32) 0px 2px 16px;
+      margin: 20px auto;
+      border-radius: 10px;
+      padding-top: 15px;
+    }
+
+    #teamimg img {
+      height: 350px;
+      width: 300px;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    #teamimg h5 {
+      font-size: 30px;
+      color: #1f3611;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    #teamimg p {
+      font-size: 20px;
+      color: #1f3611;
+      text-align: center;
+      margin-top: -50px;
+    }
+
+    /* Team icons container */
+    #fullteamicon {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 35px;
+    }
+
+    /* Individual icon */
+    #teamicon {
+      height: 40px;
+      width: 40px;
+      background-color: aliceblue;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+                  rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: -20px;
+    }
+
+    #teamicon svg {
+      width: 22px;
+      height: 22px;
+      color: rgb(167, 146, 29);
+      transition: color 0.3s ease;
+    }
+
+    /* Hover / touch effect */
+    #teamicon:hover,
+    #teamicon:active {
+      background-color: rgb(170, 132, 7);
+    }
+
+    #teamicon:hover svg,
+    #teamicon:active svg {
+      color: #1f3611;
+    }
+#fullteam {
+  display: flex;
+  justify-content: center;  /* keeps cards centered */
+  gap: 20px;                /* better spacing between cards */
+  flex-wrap: wrap;          /* makes responsive row wrap */
+}
+
+#teamimg {
+  margin: 10px 0;  /* smaller vertical spacing */
+}
+
+
+</style>
+<body>
+      <!-- Header -->
+ <section id="Home">
+  <div id="header">
+    <div id="smallheader"></div>
+    <p>Follow Us:</p>
+    <div id="headicons">
+      <i class="bi bi-facebook"></i>  
+      <i class="bi bi-twitter"></i>
+      <i class="bi bi-linkedin"></i>
+      <i class="bi bi-instagram"></i>
+    </div>
+    <div id="teleicon">
+      <i class="bi bi-telephone-fill"></i>
+      <p>Call Us: +012 345 6789</p>
+    </div>
+  </div><!-- header close -->
+
+  <!-- Heading -->
+  <div id="heading">
+    <h1>Milky</h1>
+  </div>
+
+  <!-- Navbar -->
+  <div id="navbar">
+    <!-- Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="Index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Service.html">Services</a>
+      <a href="Product.html">Products</a>
+      
+      <div class="dropdown">
+        <a href="#">Pages <i class="bi bi-caret-down-fill"></i></a>
+        <div class="dropdown-content">
+          <a href="Gallery.html">Gallery</a>
+          <a href="Features.html">Features</a>
+          <a href="Our Team.html">Our Team</a>
+          <a href="Testimonal.html">Testimonial</a>
+          <a href="Page404.html">Page 404</a>
+        </div>
+      </div>
+
+      <a href="Contact.html">Contact</a>
+    </div>
+
+    <!-- Hamburger inside navbar -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="bi bi-list"></i>
+    </div>
+  </div>
+
+  <div id="banner11">
+    <img src="Images/banner1234.jpg" alt="">
+    <h1>Our Team</h1>
+    <div id="anchor">
+      <a href="Index.html">Home &nbsp;/</a>
+      <a href="">Pages &nbsp;/</a>
+      <a href="Our Team.html">Our Team</a>
+    </div>
+  </div>
+
+<!-- Our Team  -->
+ <div data-aos="fade-up">
+<div id="fullpro1">
+  <h1><span>Our Team</span></h1>
+</div>
+
+  <div id="prohead1">
+    <h1>Experienced Team <br> Members</h1>
+  </div>
+  
+
+<div id="fullteam">
+  <!-- Team Member 1 -->
+  <div id="teamimg" data-aos="fade-up">
+    <img src="Images/team-1.jpg" alt="Team Member">
+    <h5>Adam Crew</h5>
+    <p>Founder</p>
+    <div id="fullteamicon">
+      <!-- icons -->
+      <div id="teamicon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg>
+      </div>
+    
+          <!-- Twitter -->
+      <div id="teamicon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+        </svg>
+      </div>
+
+      <!-- Instagram -->
+      <div id="teamicon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </div>
+  </div>
+</div>
+
+  <!-- Team Member 2 -->
+  <div id="teamimg" data-aos="fade-up">
+    <img src="Images/team-2.jpg" alt="Team Member">
+    <h5>Adam Crew</h5>
+    <p>Founder</p>
+    <div id="fullteamicon">
+      <!-- icons -->
+      <div id="teamicon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg>
+      </div>
+    
+          <!-- Twitter -->
+      <div id="teamicon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+        </svg>
+      </div>
+
+      <!-- Instagram -->
+      <div id="teamicon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </div>
+  </div>
+</div>
+
+
+  <!-- Team Member 3 -->
+  <div id="teamimg" >
+    <img src="Images/team-3.jpg" alt="Team Member">
+    <h5>Adam Crew</h5>
+    <p>Founder</p>
+    <div id="fullteamicon">
+      <!-- icons -->
+      <div id="teamicon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg>
+      </div>
+    
+          <!-- Twitter -->
+      <div id="teamicon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+        </svg>
+      </div>
+
+      <!-- Instagram -->
+      <div id="teamicon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </div>
+  </div>
+</div>
+</div>
+</div> 
+
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="container">
+      
+      <!-- Our Office -->
+      <div data-aos="fade-up">
+        <h4>Our Office</h4>
+        <p><i class="fa fa-map-marker-alt"></i> 123 Street, New York, USA</p>
+        <p><i class="fa fa-phone"></i> +012 345 67890</p>
+        <p><i class="fa fa-envelope"></i> info@example.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h4>Quick Links</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="#"><i class="fa fa-angle-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Our Services</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Terms & Condition</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Business Hours -->
+      <div data-aos="fade-up" data-aos-delay="400">
+        <h4>Business Hours</h4>
+        <p>Monday - Friday<br><b id="time">09:00 am - 07:00 pm</b></p>
+        <p>Saturday<br><b id="time">09:00 am - 12:00 pm</b></p>
+        <p>Sunday<br><b id="time">Closed</b></p>
+      </div>
+
+      <!-- Newsletter -->
+      <div data-aos="fade-up" data-aos-delay="600">
+        <h4>Newsletter</h4>
+        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+        <div id="newsbtn">
+          <input type="email" placeholder="Your Email">
+          <button>SignUp</button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <div class="footer-bottom" data-aos="fade-up" data-aos-delay="800">
+    <p>© <span id="style"> Your Site Name</span>, All Right Reserved.  
+    Designed By <span id="style">HTML Codex</span> Distributed By <span id="style">ThemeWagon</span></p>
+  </div>
+
+
+ 
+    <!-- Nav JS -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+    <!-- ✅ AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation time
+      once: true      // animate only once
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+      <link rel="icon" sizes="85x85" href="Images/cow_circle_only.png" >
+
+      <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ✅ AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+
+</head>
+<style>
+    #header{
+        height: 45px;
+        width: 100%;
+        background-color: #3C4430;
+        margin-top: -7px;
+        margin-left: -7px;
+    }
+#smallheader {
+    height: 45px;
+    width: 263px;
+    background-color: rgb(230, 206, 71);
+    margin-left: 1070px;
+}
+#header p {
+    font-size: 20px;
+    margin-top: -35px;
+    margin-left: 45px;
+    color: white;
+    font-weight: bold;
+}
+#headicons {
+    margin-top: -45px;
+    font-size: 20px;
+    color: white;
+    margin-left: 150px;
+    display: flex;
+    gap: 20px;
+}
+
+#teleicon {
+    margin-left: 1100px;
+    font-size: 20px;
+    margin-top: -22px;
+    color: #3C4430;
+}
+#teleicon p {
+    font-size: 18px;
+    margin-top: -23px;
+    color: #3C4430;
+    margin-left: 25px;
+}
+#heading h1 {
+    font-size: 44px;
+    margin-left: 38px;
+    color: #3C4430;
+    margin-top: 20px;
+}
+/* Navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-left: 650px;
+    margin-top: -62px;
+    position: relative; /* added */
+    z-index: 1000;   
+}   
+/* Links */
+#navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#navbar a:hover {
+    color: #75c004;
+    cursor: pointer;
+}
+/* Links container */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.dropdown {
+    position: relative;
+    
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    top: 40px;
+    left: 0;
+    min-width: 150px;
+    border-radius: 5px;
+    z-index: 1;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.dropdown-content a {
+    padding: 5px;
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+.dropdown-content a:hover {
+    background: #c0d89f;
+    color: white;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative; /* added */
+    z-index: 9999;      /* added */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #header {
+        display: none;
+    }
+    #heading h1 {
+        margin-left: 20px;
+        font-size: 36px;
+    }
+    #navbar {
+        justify-content: space-between;
+        margin: 0;
+        margin-top: -70px;
+        margin-left: 190px; /* adjusted */
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #d6d6d6;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1px 0;
+        border-radius: 0 0 10px 10px;
+        z-index: 9999; /* added */
+    }
+    .nav-links.show {
+        display: flex;
+    }
+        .nav-links a {
+      padding: 5px;
+    }
+    .nav-links a:hover {
+      background-color: #506930;
+      color: white;
+    }
+    .nav-links.show {
+      display: flex;
+    }
+    .hamburger {
+        display: block;
+        margin-left: 120px;
+        margin-top: 7px;
+    }
+}
+    /* Banner Section */
+    #banner1 {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    #banner1 img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover; /* keeps image neat */
+      display: block;
+      margin-top: 20px;
+    }
+
+    #banner1 h1 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 82px;
+      color: white;
+      margin: 0;
+    }
+
+    /* Breadcrumb links */
+    #anchor {
+      position: absolute;
+      bottom: 110px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20px;
+    }
+
+    #anchor a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ✅ Responsive */
+    @media (max-width: 768px) {
+      #banner1 img {
+        height: 200px;
+      }
+
+      #banner1 h1 {
+        font-size: 42px;
+        top: 35%;
+      }
+
+      #anchor {
+        font-size: 16px;
+        bottom: 80px;
+
+      }
+    }
+
+/* Why US CSS */
+#whyus p{
+    margin-left: 95px;
+    margin-top: 150px;
+    font-size: 15px;
+    color: #506930;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#lines{
+    height: 2px;
+    width: 50px;
+    margin-left: 180px;
+    background-color: #5e852b;
+    margin-top: -31px;
+}
+#lines1{
+    height: 2px;
+    width: 80px;
+    margin-left: 180px;
+    background-color: #5e852b;
+    margin-top: 8px;
+}
+
+#whyus h1{
+    margin-left: 95px;
+    font-size: 50px;
+    color: #394925;
+    margin-top: 15px;
+    font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+
+}
+#temlines p {
+    margin-left: 95px;
+    font-size: 18px;
+    color: #888686;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 5px;
+}
+#ticpara .bi{
+    height: 35px;
+    width: 35px;
+    color: #394925;
+    margin-left: -35px;
+}
+#ticpara p{
+    margin-top: -35px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+#fullticpara{
+    margin-top: 30px;
+    margin-left: 130px;
+}
+#whybtn button{
+    height: 50px;
+    width: 180px;
+    border-radius: 50px;
+    background-color: #E8DC63;
+    color: #394925;
+    font-size: 18px;
+    border: none;
+    margin-left: 95px;
+}
+#whybtn button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #394925;
+}
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #whyus h1 {
+        font-size: 28px;
+        margin-left: 30px;
+      }
+      #whyus p{
+        margin-top: 50px;
+        margin-left: 30px;
+      }
+      #lines,#lines1{
+        margin-left: 110px;
+      }
+
+      .counter {
+        font-size: 26px;
+      }
+      #temlines p{
+        margin-left: 30px;
+        font-size: 22px;
+      }
+      #fullticpara{
+        margin-left: 30px;
+      }
+      #ticpara .bi{
+        margin-left: 30px;
+      }
+      #ticpara p{
+        margin-left: 65px;
+        font-size: 18px;
+      }
+    }
+
+/* counterCSS */
+    .counter-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 550px;
+      margin-left: 690px;
+      margin-top: -490px;
+    }
+
+    .counter-box {
+      text-align: center;
+      padding: 40px 20px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+/* Initially hide all counter boxes */
+.counter-box {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay each box */
+.counter-box:nth-child(1) {
+  animation-delay: 1.5s;
+}
+.counter-box:nth-child(2) {
+  animation-delay: 1.5s;
+}
+.counter-box:nth-child(3) {
+  animation-delay: 2s;
+}
+.counter-box:nth-child(4) {
+  animation-delay: 2s;
+}
+
+
+    /* Colors for each box */
+    .green {
+      background: #5A8F4D;
+      color: #fff;
+    }
+
+    .yellow {
+      background: #E7D34B;
+      color: #333;
+    }
+
+    .blue {
+     background-color: #E7D34B;
+      color: #fff;
+    }
+
+    .orange {
+      background-color: #5A8F4D;
+      color: #fff;
+    }
+
+    .counter {
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      margin-top: 20px;
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #E7D34B;
+    }
+    #label{
+    margin-top: 10px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #5A8F4D;
+    }
+    .counter-box img{
+        margin-top: -40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .counter-section {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin-left: 40px;
+        margin-top: 50px;
+      }
+    }
+    
+    /* Footer */
+    .footer {
+      background: #394735; 
+      color: #fff;
+      padding: 50px 20px 20px;
+      margin-top: 80px;
+    }
+
+    .footer .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer h4 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer p, 
+    .footer a, 
+    .footer li {
+      color: #ddd;
+      font-size: 16px;
+      line-height: 1.8;
+      text-decoration: none;
+    }
+
+    .footer ul li {
+      margin-bottom: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .footer ul li:hover {
+      transform: translateX(8px);
+      color: #ffffff;
+    }
+
+    .footer ul li a {
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+
+    .footer ul li a:hover {
+      color: #ffffff; 
+      font-weight: bold;
+    }
+
+    .footer ul li i {
+      margin-right: 8px;
+      color: #d8d7d7;   
+      transition: color 0.3s ease;
+    }
+
+    .footer .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      background: #d6bb4f;
+      color: #394735;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      border-radius: 50%;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .footer .social-icons a:hover {
+      background: #fff;
+      color: #394735;
+    }
+
+    .footer-bottom {
+      background: #d8bc4c;
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
+      color: #595e57;
+      height: 50px;
+      margin-top: 0px;
+    }
+
+    #time {
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+    }
+
+    #style {
+      color: rgb(35, 85, 35);
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    #newsbtn input {
+      padding: 10px;
+      color: #ffffff;
+      height: 40px;
+      width: 250px; 
+      font-size: 18px; 
+      border: 1px solid #ffffff; 
+      border-radius: 10px;
+      background-color: transparent;
+      outline: none;
+      transition: 0.1s ease;
+    }
+
+    #newsbtn input:focus {
+      box-shadow: 0 0 10px 2px rgba(94, 145, 70, 0.9);
+      border-color: #ffffff;
+    }
+
+    #newsbtn button {
+      background-color: #daba3c; 
+      border-radius: 10px; 
+      height: 45px; 
+      width: 90px;
+      border: none;
+      font-size: 18px;
+      margin-left: -100px;
+    }
+
+    @media (max-width: 768px) {
+      .footer {
+        padding: 30px 15px;
+        text-align: center;
+      }
+
+      .footer .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer h4 {
+        font-size: 20px;
+      }
+
+      .footer p, 
+      .footer a, 
+      .footer li {
+        font-size: 15px;
+      }
+
+      .footer .social-icons {
+        margin-top: 15px;
+      }
+
+      .footer .social-icons a {
+        margin: 5px;
+      }
+
+      #newsbtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #newsbtn input {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+      }
+
+      #newsbtn button {
+        margin-left: 0;
+        width: 120px;
+      }
+
+      .footer-bottom {
+        font-size: 14px;
+        line-height: 1.6;
+        height: 60px;
+      }
+
+      #style {
+        color: rgb(35, 85, 35);
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+
+</style>
+<body>
+      <!-- Header -->
+ <section id="Home">
+  <div id="header">
+    <div id="smallheader"></div>
+    <p>Follow Us:</p>
+    <div id="headicons">
+      <i class="bi bi-facebook"></i>  
+      <i class="bi bi-twitter"></i>
+      <i class="bi bi-linkedin"></i>
+      <i class="bi bi-instagram"></i>
+    </div>
+    <div id="teleicon">
+      <i class="bi bi-telephone-fill"></i>
+      <p>Call Us: +012 345 6789</p>
+    </div>
+  </div><!-- header close -->
+
+  <!-- Heading -->
+  <div id="heading">
+    <h1>Milky</h1>
+  </div>
+
+  <!-- Navbar -->
+  <div id="navbar">
+    <!-- Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="Index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Service.html">Services</a>
+      <a href="Product.html">Products</a>
+      
+      <div class="dropdown">
+        <a href="#">Pages <i class="bi bi-caret-down-fill"></i></a>
+        <div class="dropdown-content">
+          <a href="Gallery.html">Gallery</a>
+          <a href="Features.html">Features</a>
+          <a href="Our Team.html">Our Team</a>
+          <a href="Testimonal.html">Testimonial</a>
+          <a href="Page404.html">Page 404</a>
+        </div>
+      </div>
+
+      <a href="Contact.html">Contact</a>
+    </div>
+
+    <!-- Hamburger inside navbar -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="bi bi-list"></i>
+    </div>
+  </div>
+
+  <div id="banner1">
+    <img src="Images/banner1234.jpg" alt="">
+    <h1>Features</h1>
+    <div id="anchor">
+      <a href="Index.html">Home &nbsp;/</a>
+      <a href="">Pages &nbsp;/</a>
+      <a href="Features.html">Features</a>
+    </div>
+  </div>
+
+  
+<!-- Why US -->
+<div data-aos="fade-up">
+<div id="whyus">
+    <p>WHY US!</p>
+    <div id="lines"></div>
+    <div id="lines1"></div>
+    <h1>Few Reasons Why People <br>Choosing Us!</h1>
+    </div>
+    <div id="temlines">
+    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam <br>amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit <br> clita duo justo magna dolore erat amet</p>
+    </div>
+
+<div id="fullticpara">
+<div id="ticpara">
+   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+  </svg>
+  <p>Justo magna erat amet</p>
+</div>
+
+<div id="ticpara">
+   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+  </svg>
+  <p>Aliqu diam amet diam et eos</p>
+</div>
+
+<div id="ticpara">
+   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+  </svg>
+  <p>Clita erat ipsum et lorem et sit</p>
+</div>
+</div>
+
+
+<div id="whybtn">
+  <button>Explore More</button>
+</div>
+</div>
+
+  <div class="counter-section">
+    <div class="counter-box green" style="border-top-left-radius: 10px;">
+        <img src="Images/experience.png" alt="">
+      <div class="counter" data-target="125">0</div>
+      <div class="label">Years Experience</div>
+    </div>
+    <div class="counter-box yellow" style="border-top-right-radius: 10px;">
+        <img src="Images/award.png" alt="">
+      <div class="counter" data-target="183" style="color: #000000;">0</div>
+      <div id="label">Award Winning</div>
+    </div>
+    <div class="counter-box yellow" style="border-bottom-left-radius: 10px;">
+        <img src="Images/animal.png" alt="">
+      <div class="counter" data-target="2619" style="color: #000000;">0</div>
+      <div id="label">Total Animals</div>
+    </div>
+    <div class="counter-box green" style="border-bottom-right-radius: 10px;">
+        <img src="Images/client.png" alt="">
+      <div class="counter" data-target="51940">0</div>
+      <div class="label">Happy Clients</div>
+    </div>
+  </div>
+
+
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="container">
+      
+      <!-- Our Office -->
+      <div data-aos="fade-up">
+        <h4>Our Office</h4>
+        <p><i class="fa fa-map-marker-alt"></i> 123 Street, New York, USA</p>
+        <p><i class="fa fa-phone"></i> +012 345 67890</p>
+        <p><i class="fa fa-envelope"></i> info@example.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h4>Quick Links</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="#"><i class="fa fa-angle-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Our Services</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Terms & Condition</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i> Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Business Hours -->
+      <div data-aos="fade-up" data-aos-delay="400">
+        <h4>Business Hours</h4>
+        <p>Monday - Friday<br><b id="time">09:00 am - 07:00 pm</b></p>
+        <p>Saturday<br><b id="time">09:00 am - 12:00 pm</b></p>
+        <p>Sunday<br><b id="time">Closed</b></p>
+      </div>
+
+      <!-- Newsletter -->
+      <div data-aos="fade-up" data-aos-delay="600">
+        <h4>Newsletter</h4>
+        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+        <div id="newsbtn">
+          <input type="email" placeholder="Your Email">
+          <button>SignUp</button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <div class="footer-bottom" data-aos="fade-up" data-aos-delay="800">
+    <p>© <span id="style"> Your Site Name</span>, All Right Reserved.  
+    Designed By <span id="style">HTML Codex</span> Distributed By <span id="style">ThemeWagon</span></p>
+  </div>  
+
+    <!-- Nav JS -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+  
+ 
+
+<!-- Counter Script -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+      counter.innerText = '0';
+
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        const increment = target / 200; // adjust speed
+
+        if (count < target) {
+          counter.innerText = `${Math.ceil(count + increment)}`;
+          setTimeout(updateCounter, 40);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCounter();
+    });
+  </script>
+
+  
+  <!-- ✅ AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation time
+      once: true      // animate only once
+    });
+  </script>
+</body>
+</html>
